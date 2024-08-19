@@ -1,0 +1,75 @@
+
+
+/* Mixin Display Flex */
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+/* Mixin Articles 
+@mixin articles {
+  .main {
+
+      &__article {
+          display: flex;
+          justify-content: center;
+          align-items: left;
+          flex-direction: column;
+      }
+  
+      &__h2 {
+          font-family: $ff-subtitulo;
+          font-size: $fs-subtitulo;
+          font-weight: $fw-subtitulo;
+          line-height: 1;
+          letter-spacing: $ls-subtitulo;
+          text-align: left;
+          text-transform: uppercase;
+          padding-top: $p-pattern;
+      }
+  
+      &__paragraph {
+          padding-top: $p-pattern;
+          font-family: $ff-paragrafo;
+          font-size: $fs-paragrafo;
+          font-weight: $fw-paragrafo;
+          letter-spacing: $ls-paragrafo;
+          text-align: left;
+      }
+
+  }
+  
+}
+
+@mixin fonts($font-size, $screen-size: $breakpoint) {
+    @each $breakpoint, $font-size in $fs-map {
+      @if $screen-size == null {
+        @include make-font-size($font-size);
+      }
+      @else {
+        @if map-has-key($screen-sizes, $screen-size) {
+          $screen-size: map-get($screen-size, $screen-size);
+        }
+        @media screen and (min-width: $screen-size) {
+          @include make-font-size($font-size);
+        }
+      }
+    }
+}
+  
+
+@mixin make-font-size($font-size) {
+
+  @if type-of($font-size) == "list" {
+    font-size: nth($font-size, 1);
+    @if (length($font-size) > 1) {
+      line-height: nth($font-size, 2);
+    }
+  }
+  
+  @else {
+    font-size: $font-size;
+  }
+} */

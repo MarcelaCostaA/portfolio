@@ -1,0 +1,103 @@
+$breakpoints: ( 
+  $null: 320px,
+  $mobile: 360px,
+  $tablet: 768px,
+  $desktop: 1200px,
+);
+
+$h1-font-sizes: (
+  $null: 3.125rem,
+  $mobile: 3.75rem,
+  $tablet: 4.5rem,
+  $desktop: 7.5rem,
+);
+
+$h2-font-sizes: (
+  $null: 2rem,
+  $mobile: 2.375rem,
+  $tablet: 2.875rem,
+  $desktop: 3.75rem,
+);
+
+$h3-font-sizes: (
+  $null: 1.5rem,
+  $mobile: 1.75rem,
+  $tablet: 1.75rem,
+  $desktop: 2rem,
+);
+
+$h4-font-sizes: (
+  $null: 1.25rem,
+  $mobile: 1.5rem,
+  $tablet: 1.5rem,
+  $desktop: 1.75rem,
+);
+
+$h5-font-sizes: (
+  $null: 1.125rem,
+  $mobile: 1.25rem,
+  $tablet: 1.25rem,
+  $desktop: 1.5rem,
+);
+
+$p-font-sizes: (
+  $null: 0.875rem,
+  $mobile: 1rem,
+  $tablet: 1.125rem,
+  $desktop: 1.125rem,
+);
+
+/* Terminar de Revisar com base no link - https://gist.github.com/halofx/635ac22fd88a45e06480 e https://www.smashingmagazine.com/2015/06/responsive-typography-with-sass-maps/*/
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == $null {
+      @include make-font-size($fs-font-size);
+    }
+    @else {
+      // If $fs-font-size is a key that exists in
+      // $screen-sizes, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media only screen and (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+
+@mixin make-font-size($fs-font-size) {
+  @if type-of($value: $fs-font-size) == "list" {
+    font-size: nth($fs-font-size, 1);
+    @if (length($list: $fs-font-size) > 1) {
+      line-height: nth($fs-font-size, 2);
+    }
+  }
+  @else {
+    font-size: $fs-font-size;
+  }
+}
+
+/*
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint >= $desktop {
+      font-size: $fs-font-size;
+    }
+    @else {
+      // If $fs-font-size is a key that exists in
+      // $screen-sizes, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media only screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}*/
+
+
+
+
+

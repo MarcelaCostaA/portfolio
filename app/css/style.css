@@ -1,0 +1,324 @@
+@charset "UTF-8";
+/* Box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Margem */
+* {
+  margin: 0;
+}
+
+/* Tipografia */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mídia */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Fontes */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Overflow */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Cores */
+/* $bg-gold é uma graduação de cor para background das linhas douradas */
+/* Width - Height */
+/* Margem - Padding - Gap */
+/* Gap */
+/* Padding */
+/* Famílias de Fontes */
+/* Font Weight */
+/* Icon Size */
+/* Breakpoints */
+/* Terminar de Revisar com base no link - https://gist.github.com/halofx/635ac22fd88a45e06480 e https://www.smashingmagazine.com/2015/06/responsive-typography-with-sass-maps/*/
+/*
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint >= $desktop {
+      font-size: $fs-font-size;
+    }
+    @else {
+      // If $fs-font-size is a key that exists in
+      // $screen-sizes, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media only screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}*/
+/* Mixin Display Flex */
+/* Mixin Articles 
+@mixin articles {
+  .main {
+
+      &__article {
+          display: flex;
+          justify-content: center;
+          align-items: left;
+          flex-direction: column;
+      }
+
+      &__h2 {
+          font-family: $ff-subtitulo;
+          font-size: $fs-subtitulo;
+          font-weight: $fw-subtitulo;
+          line-height: 1;
+          letter-spacing: $ls-subtitulo;
+          text-align: left;
+          text-transform: uppercase;
+          padding-top: $p-pattern;
+      }
+
+      &__paragraph {
+          padding-top: $p-pattern;
+          font-family: $ff-paragrafo;
+          font-size: $fs-paragrafo;
+          font-weight: $fw-paragrafo;
+          letter-spacing: $ls-paragrafo;
+          text-align: left;
+      }
+
+  }
+
+}
+
+@mixin fonts($font-size, $screen-size: $breakpoint) {
+    @each $breakpoint, $font-size in $fs-map {
+      @if $screen-size == null {
+        @include make-font-size($font-size);
+      }
+      @else {
+        @if map-has-key($screen-sizes, $screen-size) {
+          $screen-size: map-get($screen-size, $screen-size);
+        }
+        @media screen and (min-width: $screen-size) {
+          @include make-font-size($font-size);
+        }
+      }
+    }
+}
+
+
+@mixin make-font-size($font-size) {
+
+  @if type-of($font-size) == "list" {
+    font-size: nth($font-size, 1);
+    @if (length($font-size) > 1) {
+      line-height: nth($font-size, 2);
+    }
+  }
+
+  @else {
+    font-size: $font-size;
+  }
+} */
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: "Noto Sans", sans-serif;
+  background-color: #151515;
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Serif", serif;
+}
+
+h1 {
+  font-size: 3.125rem;
+  margin: 1.6rem 0;
+  font-weight: 700;
+}
+@media only screen and (min-width: 360px) {
+  h1 {
+    font-size: 3.75rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 7.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+@media only screen and (min-width: 360px) {
+  h2 {
+    font-size: 2.375rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 2.875rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h2 {
+    font-size: 3.75rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+@media only screen and (min-width: 360px) {
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+@media only screen and (min-width: 360px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h4 {
+    font-size: 1.75rem;
+  }
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+@media only screen and (min-width: 360px) {
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h5 {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+@media only screen and (min-width: 360px) {
+  p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Desktop - Header */
+.header {
+  max-width: 70rem;
+  height: 50rem;
+  position: relative;
+  margin: 0 auto;
+}
+.header__social {
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 1.5rem;
+  z-index: 2;
+}
+.header__icon {
+  color: white;
+  font-style: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 2rcap;
+}
+.header__presentation {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+.header__line-gold, .header__line-gold--short {
+  height: 4px;
+  background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
+.header__figure {
+  z-index: 0;
+}
+.header__photo {
+  width: 30rem;
+  height: 50rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Revisar main */
+.main {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+.main__hard-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Breakpoints */
+/* Media query - tabletX */
+/* Media query - mobile *//*# sourceMappingURL=style.css.map */

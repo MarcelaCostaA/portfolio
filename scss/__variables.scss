@@ -1,0 +1,50 @@
+/* Cores */
+$cor-branco: white;
+$cor-preto: #151515;
+$cor-grafite: #242424;
+$cor-ouro: #d4af37;
+$bg-gold: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+/* $bg-gold é uma graduação de cor para background das linhas douradas */
+
+/* Width - Height */
+$max-width: 70rem;
+
+/* Margem - Padding - Gap */
+/* Gap */
+$gg-columns: 2rem;
+$gg-rows: 4rem;
+
+/* Padding */
+$p-desktop-b: 7.5rem;
+$p-desktop-s: 3.75rem;
+$p-tablet-b: 5rem;
+$p-tablet-s: 2.5rem;
+$p-mobile-b: 4rem;
+$p-mobile-s: 2rem;
+
+/* Famílias de Fontes */
+$ff-titulos: "Noto Serif", serif;
+$ff-paragrafo: "Noto Sans", sans-serif;
+
+/* Font Weight */
+$fw-h1: 700; 
+$fw-h2:  500; 
+$fw-h3: 400;
+$fw-h4: 300; 
+$fw-h5: 300; 
+$fw-paragrafo: 300; 
+
+/* Icon Size */
+$fs-icon-desk: 1.5rem;
+$fs-icon-tablet: 1.5rem;
+$fs-icon-mob: 1.25rem;
+
+/* Breakpoints */
+$null: 320px;
+$mobile: 360px;
+$tablet: 768px;
+$desktop: 1200px;
+
+
+
