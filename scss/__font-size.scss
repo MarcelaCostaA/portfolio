@@ -1,3 +1,5 @@
+
+
 $breakpoints: ( 
   $null: 320px,
   $mobile: 360px,
@@ -6,9 +8,9 @@ $breakpoints: (
 );
 
 $h1-font-sizes: (
-  $null: 3.125rem,
-  $mobile: 3.75rem,
-  $tablet: 4.5rem,
+  $null: $fs-null,
+  $mobile: $fs-mobile,
+  $tablet: $fs-tablet,
   $desktop: 7.5rem,
 );
 
@@ -76,7 +78,7 @@ $p-font-sizes: (
   @else {
     font-size: $fs-font-size;
   }
-}
+} 
 
 /*
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {

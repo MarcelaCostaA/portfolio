@@ -7,24 +7,35 @@ $bg-gold: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #
 radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 /* $bg-gold é uma graduação de cor para background das linhas douradas */
 
-/* Width - Height */
-$max-width: 70rem;
+/* Width */
+$max-width-mobile: 43.9375rem;
+$max-width-tablet: 70rem;
+$max-width-desktop: 70rem;
+
+/* Height */
+$max-height-header-mobile: 24rem;
+$max-height-header-tablet: 37.5rem;
+$max-height-header-desktop: 50rem;
+$foto-height-mobile: 24rem;
+$foto-height-tablet: 37.5rem;
+$foto-height-desktop: 50rem;
 
 /* Margem - Padding - Gap */
 /* Gap */
 $gg-columns: 2rem;
 $gg-rows: 4rem;
 
-/* Padding */
-$p-desktop-b: 7.5rem;
-$p-desktop-s: 3.75rem;
-$p-tablet-b: 5rem;
-$p-tablet-s: 2.5rem;
-$p-mobile-b: 4rem;
-$p-mobile-s: 2rem;
+/* Margin */
+$m-desktop-b: 7.5rem;
+$m-desktop-s: 3.75rem;
+$m-tablet-b: 5rem;
+$m-tablet-s: 2.5rem;
+$m-mobile-b: 4rem;
+$m-mobile-s: 2rem;
 
 /* Famílias de Fontes */
 $ff-titulos: "Noto Serif", serif;
+$ff-subtitulos: "Noto Sans", sans-serif;
 $ff-paragrafo: "Noto Sans", sans-serif;
 
 /* Font Weight */
@@ -39,6 +50,11 @@ $fw-paragrafo: 300;
 $fs-icon-desk: 1.5rem;
 $fs-icon-tablet: 1.5rem;
 $fs-icon-mob: 1.25rem;
+
+/* Clamps para Font Size - variáveis utilizadas no arquivo font-size */
+$fs-null: clamp(2rem, -2rem + 20vw, 2.5rem);
+$fs-mobile: clamp(2.5rem, 0.731rem + 7.8624vw, 4.5rem);
+$fs-tablet: clamp(4.5rem, -2.0455rem + 13.6364vw, 7.5rem);
 
 /* Breakpoints */
 $null: 320px;
