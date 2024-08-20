@@ -10,11 +10,11 @@ body {
     color: $cor-branco;
 }
 
-h1 {
+h1, h2 {
     font-family: $ff-titulos;
 }
 
-h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
     font-family: $ff-subtitulos;
 }
 
@@ -28,6 +28,7 @@ h1 {
 h2 {
     @include font-size($h2-font-sizes);
 
+    margin-bottom: $m-desktop-s;
     font-weight: $fw-h2;
 }
 
@@ -43,15 +44,10 @@ h4 {
     font-weight: $fw-h4;
 }
 
-h5 {
-    @include font-size($h5-font-sizes);
-
-    font-weight: $fw-h5;
-}
-
 p {
     @include font-size($p-font-sizes);
 
+    margin-bottom: $m-desktop-s;
     font-weight: $fw-paragrafo;
 }
 
@@ -101,20 +97,42 @@ p {
 
 }
 
-/* Revisar main */
+/* Desktop - Main */
 .main {
     max-width: $max-width-desktop;
     margin: 0 auto $m-desktop-b auto;
 
     &__hard-skills {
-
         @include flexCenter(row, space-between);
+
+        margin-bottom: $m-desktop-b;
     }
+
+    &__projeto {
+        
+        @include projeto;
+    }
+}
+
+/* Desktop - Footer */
+.footer {
+    max-width: $max-width-desktop;
+    margin: 0 auto $m-desktop-b auto;
 }
 
 
 /* Media query - mobiles */
 @media (min-width: $null) and (max-width: calc(#{$tablet} - 1px)) {
+    
+    h2 {   
+        margin-bottom: $m-mobile-s;
+    }
+
+    p {
+        margin-bottom: $m-mobile-s;
+    }
+
+    /* Mobile - Header */
     .header {
         max-width: $max-width-mobile;
         height: $max-height-header-mobile;
@@ -129,20 +147,38 @@ p {
         }
     }
 
+    /* Mobile - Main */
     .main {
         max-width: $max-width-mobile;
         margin: 0 $m-mobile-s $m-mobile-b $m-mobile-s;
     
         &__hard-skills {
-            @include flexCenter(column, center);
+            @include flexCenter(row, space-between);
 
             flex-wrap: wrap;
+            margin-bottom: $m-mobile-b;
         }
+    }
+
+    /* Mobile - Footer */
+    .footer {
+        max-width: $max-width-mobile;
+        margin: 0 $m-mobile-s $m-mobile-b $m-mobile-s;
     }
 }
 
 /* Media query - tablets */
 @media (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+
+    h2 {   
+        margin-bottom: $m-tablet-s;
+    }
+
+    p {
+        margin-bottom: $m-tablet-s;
+    }
+
+    /* Tablet - Header */
     .header {
         max-width: $max-width-tablet;
         height: $max-height-header-tablet;
@@ -157,6 +193,7 @@ p {
         }
     }
 
+    /* Tablet - Main */
     .main {
         max-width: $max-width-tablet;
         margin: 0 $m-tablet-s $m-tablet-b $m-tablet-s;
@@ -165,7 +202,14 @@ p {
             @include flexCenter(row, space-between);
 
             flex-wrap: wrap;
+            margin-bottom: $m-tablet-b;
         }
+    }
+
+    /* Tablet - Footer */
+    .footer {
+        max-width: $max-width-tablet;
+        margin: 0 $m-tablet-s $m-tablet-b $m-tablet-s;
     }
 }
 

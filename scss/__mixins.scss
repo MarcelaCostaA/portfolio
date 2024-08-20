@@ -8,39 +8,48 @@
   flex-direction: $direction;
 }
 
-/* Mixin Articles 
-@mixin articles {
+@mixin projeto {
   .main {
+    &__projeto {
+      @include flexCenter(column, flex-start);
 
-      &__article {
-          display: flex;
-          justify-content: center;
-          align-items: left;
-          flex-direction: column;
-      }
+      min-width: 25rem;
+      max-width: 34rem;
+      min-height: 9,19rem;
+      max-height: 12.5rem;
+    }
   
-      &__h2 {
-          font-family: $ff-subtitulo;
-          font-size: $fs-subtitulo;
-          font-weight: $fw-subtitulo;
-          line-height: 1;
-          letter-spacing: $ls-subtitulo;
-          text-align: left;
-          text-transform: uppercase;
-          padding-top: $p-pattern;
-      }
+    &__hSkills {
+      @include flexCenter(row, flex-start);
+    }
   
-      &__paragraph {
-          padding-top: $p-pattern;
-          font-family: $ff-paragrafo;
-          font-size: $fs-paragrafo;
-          font-weight: $fw-paragrafo;
-          letter-spacing: $ls-paragrafo;
-          text-align: left;
-      }
-
+    &__links {
+      @include flexCenter(row, flex-start);
+    }
   }
+}
+
+
+/* Mixin Articles 
+@mixin projeto {
+  .main {
+    &__projeto {
+      @include flexCenter(column, flex-start);
+
+      min-width: 25rem;
+      max-width: 34rem;
+      min-heigth: 9,19rem;
+      max-heigth: 12.5rem;
+    }
   
+    &__hSkills {
+      @include flexCenter(row, flex-start);
+    }
+  
+    &__links {
+      @include flexCenter(row, flex-start);
+    }
+  }
 }
 
 @mixin fonts($font-size, $screen-size: $breakpoint) {

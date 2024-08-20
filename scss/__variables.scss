@@ -26,16 +26,16 @@ $gg-columns: 2rem;
 $gg-rows: 4rem;
 
 /* Margin */
-$m-desktop-b: 7.5rem;
+$m-desktop-b: 7rem;
 $m-desktop-s: 3.75rem;
 $m-tablet-b: 5rem;
 $m-tablet-s: 2.5rem;
-$m-mobile-b: 4rem;
+$m-mobile-b: 3.6rem;
 $m-mobile-s: 2rem;
 
 /* Famílias de Fontes */
 $ff-titulos: "Noto Serif", serif;
-$ff-subtitulos: "Noto Sans", sans-serif;
+$ff-subtitulos: "Nunito Sans", sans-serif;
 $ff-paragrafo: "Noto Sans", sans-serif;
 
 /* Font Weight */
@@ -51,10 +51,30 @@ $fs-icon-desk: 1.5rem;
 $fs-icon-tablet: 1.5rem;
 $fs-icon-mob: 1.25rem;
 
-/* Clamps para Font Size - variáveis utilizadas no arquivo font-size */
-$fs-null: clamp(2rem, -2rem + 20vw, 2.5rem);
-$fs-mobile: clamp(2.5rem, 0.731rem + 7.8624vw, 4.5rem);
-$fs-tablet: clamp(4.5rem, -2.0455rem + 13.6364vw, 7.5rem);
+/* Font Size - variáveis utilizadas no arquivo font-size */
+/* H1 */
+$fs-h1-null: clamp(2rem, -2rem + 20vw, 2.5rem);
+$fs-h1-mobile: clamp(2.5rem, 0.731rem + 7.8624vw, 4.5rem);
+$fs-h1-tablet: clamp(4.5rem, -2.0455rem + 13.6364vw, 7.5rem);
+$fs-h1-desktop: 7.5rem;
+
+/* H2 */
+$fs-h2-null: clamp(1.25rem, -0.75rem + 10vw, 1.5rem); /* 20px a 24px*/
+$fs-h2-mobile: clamp(1.5rem, 0.8382rem + 2.9412vw, 2.25rem); /* 24px a 36px*/
+$fs-h2-tablet: clamp(2.25rem, 1.5833rem + 1.3889vw, 2.625rem); /* 36px a 42px*/
+$fs-h2-desktop: 2.625rem; /* 42px*/
+
+/* H3 */
+$fs-h3-null: clamp(1.125rem, -0.875rem + 10vw, 1.375rem); /* 18px a 22px*/
+$fs-h3-mobile: clamp(1.375rem, 1.0441rem + 1.4706vw, 1.75rem); /* 22px a 28px*/
+$fs-h3-tablet: clamp(1.75rem, 1.0833rem + 1.3889vw, 2.125rem); /* 28px a 34px*/
+$fs-h3-desktop: 2.125rem; /* 34px*/
+
+/* Parágrafos */
+$fs-p-null: 1rem; /* 16px */
+$fs-p-mobile: 1.15rem; /* 18.4px */
+$fs-p-tablet: 1.25rem; /* 20px */
+$fs-p-desktop: 1.5rem; /* 24px */
 
 /* Breakpoints */
 $null: 320px;

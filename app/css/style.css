@@ -46,7 +46,23 @@ a {
 /* Famílias de Fontes */
 /* Font Weight */
 /* Icon Size */
-/* Clamps para Font Size - variáveis utilizadas no arquivo font-size */
+/* Font Size - variáveis utilizadas no arquivo font-size */
+/* H1 */
+/* H2 */
+/* 20px a 24px*/
+/* 24px a 36px*/
+/* 36px a 42px*/
+/* 42px*/
+/* H3 */
+/* 18px a 22px*/
+/* 22px a 28px*/
+/* 28px a 34px*/
+/* 34px*/
+/* Parágrafos */
+/* 16px */
+/* 18.4px */
+/* 20px */
+/* 24px */
 /* Breakpoints */
 /* Terminar de Revisar com base no link - https://gist.github.com/halofx/635ac22fd88a45e06480 e https://www.smashingmagazine.com/2015/06/responsive-typography-with-sass-maps/*/
 /*
@@ -69,38 +85,25 @@ a {
 }*/
 /* Mixin Display Flex */
 /* Mixin Articles 
-@mixin articles {
+@mixin projeto {
   .main {
+    &__projeto {
+      @include flexCenter(column, flex-start);
 
-      &__article {
-          display: flex;
-          justify-content: center;
-          align-items: left;
-          flex-direction: column;
-      }
+      min-width: 25rem;
+      max-width: 34rem;
+      min-heigth: 9,19rem;
+      max-heigth: 12.5rem;
+    }
 
-      &__h2 {
-          font-family: $ff-subtitulo;
-          font-size: $fs-subtitulo;
-          font-weight: $fw-subtitulo;
-          line-height: 1;
-          letter-spacing: $ls-subtitulo;
-          text-align: left;
-          text-transform: uppercase;
-          padding-top: $p-pattern;
-      }
+    &__hSkills {
+      @include flexCenter(row, flex-start);
+    }
 
-      &__paragraph {
-          padding-top: $p-pattern;
-          font-family: $ff-paragrafo;
-          font-size: $fs-paragrafo;
-          font-weight: $fw-paragrafo;
-          letter-spacing: $ls-paragrafo;
-          text-align: left;
-      }
-
+    &__links {
+      @include flexCenter(row, flex-start);
+    }
   }
-
 }
 
 @mixin fonts($font-size, $screen-size: $breakpoint) {
@@ -140,12 +143,12 @@ body {
   color: white;
 }
 
-h1 {
+h1, h2 {
   font-family: "Noto Serif", serif;
 }
 
-h2, h3, h4, h5, h6 {
-  font-family: "Noto Sans", sans-serif;
+h3, h4, h5, h6 {
+  font-family: "Nunito Sans", sans-serif;
 }
 
 h1 {
@@ -170,22 +173,23 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: clamp(1.25rem, -0.75rem + 10vw, 1.5rem);
+  margin-bottom: 3.75rem;
   font-weight: 500;
 }
 @media only screen and (min-width: 360px) {
   h2 {
-    font-size: 2.375rem;
+    font-size: clamp(1.5rem, 0.8382rem + 2.9412vw, 2.25rem);
   }
 }
 @media only screen and (min-width: 768px) {
   h2 {
-    font-size: 2.875rem;
+    font-size: clamp(2.25rem, 1.5833rem + 1.3889vw, 2.625rem);
   }
 }
 @media only screen and (min-width: 1200px) {
   h2 {
-    font-size: 3.75rem;
+    font-size: 2.625rem;
   }
 }
 
@@ -229,43 +233,24 @@ h4 {
   }
 }
 
-h5 {
-  font-size: 1.125rem;
-  font-weight: 300;
-}
-@media only screen and (min-width: 360px) {
-  h5 {
-    font-size: 1.25rem;
-  }
-}
-@media only screen and (min-width: 768px) {
-  h5 {
-    font-size: 1.25rem;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  h5 {
-    font-size: 1.5rem;
-  }
-}
-
 p {
-  font-size: 0.875rem;
+  font-size: 1rem;
+  margin-bottom: 3.75rem;
   font-weight: 300;
 }
 @media only screen and (min-width: 360px) {
   p {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 }
 @media only screen and (min-width: 768px) {
   p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   p {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -274,7 +259,7 @@ p {
   max-width: 70rem;
   height: 50rem;
   position: relative;
-  margin: 0 auto 7.5rem auto;
+  margin: 0 auto 7rem auto;
 }
 .header__social {
   position: absolute;
@@ -312,24 +297,60 @@ p {
   right: 0;
 }
 
-/* Revisar main */
+/* Desktop - Main */
 .main {
   max-width: 70rem;
-  margin: 0 auto 7.5rem auto;
+  margin: 0 auto 7rem auto;
 }
 .main__hard-skills {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  margin-bottom: 7rem;
+}
+.main__projeto .main__projeto {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-width: 25rem;
+  max-width: 34rem;
+  min-height: 9, 19rem;
+  max-height: 12.5rem;
+}
+.main__projeto .main__hSkills {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.main__projeto .main__links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Desktop - Footer */
+.footer {
+  max-width: 70rem;
+  margin: 0 auto 7rem auto;
 }
 
 /* Media query - mobiles */
 @media (min-width: 320px) and (max-width: calc(768px - 1px)) {
+  h2 {
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+  /* Mobile - Header */
   .header {
     max-width: 43.9375rem;
     height: 24rem;
-    margin: 0 2rem 4rem 2rem;
+    margin: 0 2rem 3.6rem 2rem;
   }
   .header__social {
     top: 1rem;
@@ -337,20 +358,34 @@ p {
   .header__photo {
     height: 24rem;
   }
+  /* Mobile - Main */
   .main {
     max-width: 43.9375rem;
-    margin: 0 2rem 4rem 2rem;
+    margin: 0 2rem 3.6rem 2rem;
   }
   .main__hard-skills {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 3.6rem;
+  }
+  /* Mobile - Footer */
+  .footer {
+    max-width: 43.9375rem;
+    margin: 0 2rem 3.6rem 2rem;
   }
 }
 /* Media query - tablets */
 @media (min-width: 768px) and (max-width: calc(1200px - 1px)) {
+  h2 {
+    margin-bottom: 2.5rem;
+  }
+  p {
+    margin-bottom: 2.5rem;
+  }
+  /* Tablet - Header */
   .header {
     max-width: 70rem;
     height: 37.5rem;
@@ -362,6 +397,7 @@ p {
   .header__photo {
     height: 37.5rem;
   }
+  /* Tablet - Main */
   .main {
     max-width: 70rem;
     margin: 0 2.5rem 5rem 2.5rem;
@@ -372,5 +408,11 @@ p {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
+  /* Tablet - Footer */
+  .footer {
+    max-width: 70rem;
+    margin: 0 2.5rem 5rem 2.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

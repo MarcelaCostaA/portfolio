@@ -8,17 +8,17 @@ $breakpoints: (
 );
 
 $h1-font-sizes: (
-  $null: $fs-null,
-  $mobile: $fs-mobile,
-  $tablet: $fs-tablet,
-  $desktop: 7.5rem,
+  $null: $fs-h1-null,
+  $mobile: $fs-h1-mobile,
+  $tablet: $fs-h1-tablet,
+  $desktop: $fs-h1-desktop,
 );
 
 $h2-font-sizes: (
-  $null: 2rem,
-  $mobile: 2.375rem,
-  $tablet: 2.875rem,
-  $desktop: 3.75rem,
+  $null: $fs-h2-null,
+  $mobile: $fs-h2-mobile,
+  $tablet: $fs-h2-tablet,
+  $desktop: $fs-h2-desktop,
 );
 
 $h3-font-sizes: (
@@ -43,10 +43,10 @@ $h5-font-sizes: (
 );
 
 $p-font-sizes: (
-  $null: 0.875rem,
-  $mobile: 1rem,
-  $tablet: 1.125rem,
-  $desktop: 1.125rem,
+  $null: $fs-p-null,
+  $mobile: $fs-p-mobile,
+  $tablet: $fs-p-tablet,
+  $desktop: $fs-p-desktop,
 );
 
 /* Terminar de Revisar com base no link - https://gist.github.com/halofx/635ac22fd88a45e06480 e https://www.smashingmagazine.com/2015/06/responsive-typography-with-sass-maps/*/
