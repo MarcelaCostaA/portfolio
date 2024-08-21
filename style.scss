@@ -51,9 +51,21 @@ p {
     font-weight: $fw-paragrafo;
 }
 
-a:link {
-    color: $cor-ouro;
-    text-decoration-line: underline;
+.link {
+    color: $cor-branco;
+    text-decoration: underline $cor-ouro solid 1.5px;
+    text-underline-offset: 0.5rem;
+    transition: all 0.3ms ease-in-out;
+    padding-right: $pr-desktop;
+}
+
+.link:hover {
+    text-decoration: underline $cor-branco solid 1.5px;
+    cursor: pointer; 
+}
+
+.link:active {
+    text-decoration: underline $cor-branco solid 1.5px;
     cursor: pointer;
 }
 
@@ -77,6 +89,10 @@ a:link {
         font-style: $fs-icon-desk;
         padding-right: 1.5rem;
         font-size: 2rcap;
+    }
+
+    &__icon:hover, &__icon:active {
+        color: $cor-preto;
     }
     
     &__presentation {
@@ -108,8 +124,17 @@ a:link {
     max-width: $max-width-desktop;
     margin: 0 auto $m-desktop-b auto;
 
+    /* Lista de tecnologias na apresentação - article1 */
+    &__hard-skills {
+        @include flexCenter(row, center);
+        column-gap: calc($gg-columns * 2.5);
+
+        margin-bottom: $m-desktop-b;
+    }
+
+    /* article2 */
     &__container-grid {
-        
+
         @include projeto;
     }
 
@@ -117,20 +142,12 @@ a:link {
         margin-bottom: calc($m-desktop-b / 4);
     }
 
-
-    /* Lista de tecnologias na apresentação - article1 */
-    &__hard-skills {
-        @include flexCenter(row, flex-start);
-        column-gap: calc($gg-columns * 2.5);
-
-        margin-bottom: $m-desktop-b;
-    }
-
     /* Lista de tecnologias utilizadas em cada projeto - article2 */
     &__hSkills {
         @include flexCenter(row, flex-start);
+        
         column-gap: calc($gg-columns * 2.5);
-
+        margin-top: calc($mb-desktop / 2);
         margin-bottom: $mb-desktop;
     }
 
@@ -183,12 +200,29 @@ a:link {
         max-width: $max-width-mobile;
         margin: 0 $m-mobile-s $m-mobile-b $m-mobile-s;
     
+        /* Mobile - Lista de tecnologias na apresentação - article1 */
         &__hard-skills {
-            @include flexCenter(row, space-between);
+            @include flexCenter(row, center);
 
             flex-wrap: wrap;
             margin-bottom: $m-mobile-b;
         }
+
+        /* article2 */
+        &__picture {
+            margin-bottom: calc($m-mobile-b / 4);
+        }
+
+        /* Lista de tecnologias utilizadas em cada projeto - article2 */
+        &__hSkills {
+            margin-top: calc($mb-mobile / 2);
+            margin-bottom: $mb-mobile;
+        }
+
+        &__links {
+            margin-bottom: calc($mb-mobile * 3);
+        }
+
     }
 
     /* Mobile - Footer */
@@ -229,11 +263,27 @@ a:link {
         max-width: $max-width-tablet;
         margin: 0 $m-tablet-s $m-tablet-b $m-tablet-s;
     
+        /* Mobile - Lista de tecnologias na apresentação - article1 */
         &__hard-skills {
-            @include flexCenter(row, space-between);
+            @include flexCenter(row, center);
 
             flex-wrap: wrap;
             margin-bottom: $m-tablet-b;
+        }
+
+        /* article2 */
+        &__picture {
+            margin-bottom: calc($m-tablet-b / 4);
+        }
+
+        /* Lista de tecnologias utilizadas em cada projeto - article2 */
+        &__hSkills {      
+            margin-top: calc($mb-tablet / 2);
+            margin-bottom: $mb-tablet;
+        }
+
+        &__links {
+            margin-bottom: calc($mb-tablet * 3);
         }
     }
 

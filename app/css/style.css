@@ -66,116 +66,8 @@ a {
 /* 24px */
 /* Breakpoints */
 /* Terminar de Revisar com base no link - https://gist.github.com/halofx/635ac22fd88a45e06480 e https://www.smashingmagazine.com/2015/06/responsive-typography-with-sass-maps/*/
-/*
-@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
-  @each $fs-breakpoint, $fs-font-size in $fs-map {
-    @if $fs-breakpoint >= $desktop {
-      font-size: $fs-font-size;
-    }
-    @else {
-      // If $fs-font-size is a key that exists in
-      // $screen-sizes, use the value
-      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
-        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
-      }
-      @media only screen and (min-width: $fs-breakpoint) {
-        font-size: $fs-font-size;
-      }
-    }
-  }
-}*/
 /* Mixin Display Flex */
 /* Mixin para Grid */
-/*
-@mixin 
-
-@mixin projeto {
-
-  @if @media (min-width: 476px) {
-    max-width: $max-width-desktop;
-    display: grid;
-    grid-template-columns: 48.57% 48.57%;
-    grid-auto-rows: minmax(9.19rem, auto);
-    column-gap: $gg-columns;
-    row-gap: $gg-rows;
-  }
-  @else {
-    max-width: $max-width-desktop;
-    display: grid;
-    grid-template-columns: 48.57% 48.57%;
-    grid-auto-rows: minmax(9.19rem, auto);
-    column-gap: $gg-columns;
-    row-gap: $gg-rows;
-  }
-}
-
-
-
-
-}
-
-&__hSkills {
-      @include flexCenter(row, flex-start);
-    }
-
-    &__links {
-      @include flexCenter(row, flex-start);
-    }
-  }
-
-
-/* Mixin Articles 
-@mixin projeto {
-  .main {
-    &__projeto {
-      @include flexCenter(column, flex-start);
-
-      min-width: 25rem;
-      max-width: 34rem;
-      min-heigth: 9,19rem;
-      max-heigth: 12.5rem;
-    }
-
-    &__hSkills {
-      @include flexCenter(row, flex-start);
-    }
-
-    &__links {
-      @include flexCenter(row, flex-start);
-    }
-  }
-}
-
-@mixin fonts($font-size, $screen-size: $breakpoint) {
-    @each $breakpoint, $font-size in $fs-map {
-      @if $screen-size == null {
-        @include make-font-size($font-size);
-      }
-      @else {
-        @if map-has-key($screen-sizes, $screen-size) {
-          $screen-size: map-get($screen-size, $screen-size);
-        }
-        @media screen and (min-width: $screen-size) {
-          @include make-font-size($font-size);
-        }
-      }
-    }
-}
-
-
-@mixin make-font-size($font-size) {
-
-  @if type-of($font-size) == "list" {
-    font-size: nth($font-size, 1);
-    @if (length($font-size) > 1) {
-      line-height: nth($font-size, 2);
-    }
-  }
-
-  @else {
-    font-size: $font-size;
-  }
-} */
 body {
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
@@ -254,17 +146,17 @@ h3 {
 }
 
 h4 {
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 @media only screen and (min-width: 360px) {
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 @media only screen and (min-width: 768px) {
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -294,9 +186,24 @@ p {
   }
 }
 
-a:link {
-  color: #d4af37;
-  text-decoration-line: underline;
+.link {
+  color: white;
+  -webkit-text-decoration: underline #d4af37 solid 1.5px;
+          text-decoration: underline #d4af37 solid 1.5px;
+  text-underline-offset: 0.5rem;
+  transition: all 0.3ms ease-in-out;
+  padding-right: 2rem;
+}
+
+.link:hover {
+  -webkit-text-decoration: underline white solid 1.5px;
+          text-decoration: underline white solid 1.5px;
+  cursor: pointer;
+}
+
+.link:active {
+  -webkit-text-decoration: underline white solid 1.5px;
+          text-decoration: underline white solid 1.5px;
   cursor: pointer;
 }
 
@@ -323,6 +230,9 @@ a:link {
   padding-right: 1.5rem;
   font-size: 2rcap;
 }
+.header__icon:hover, .header__icon:active {
+  color: #151515;
+}
 .header__presentation {
   width: 100%;
   bottom: 0;
@@ -348,7 +258,17 @@ a:link {
   max-width: 70rem;
   margin: 0 auto 7rem auto;
   /* Lista de tecnologias na apresentação - article1 */
+  /* article2 */
   /* Lista de tecnologias utilizadas em cada projeto - article2 */
+}
+.main__hard-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  -moz-column-gap: 7.15%;
+       column-gap: 7.15%;
+  margin-bottom: 7rem;
 }
 @media (min-width: 476px) {
   .main__container-grid {
@@ -369,15 +289,6 @@ a:link {
 .main__picture {
   margin-bottom: 1.75rem;
 }
-.main__hard-skills {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  -moz-column-gap: 7.15%;
-       column-gap: 7.15%;
-  margin-bottom: 7rem;
-}
 .main__hSkills {
   display: flex;
   justify-content: flex-start;
@@ -385,7 +296,8 @@ a:link {
   flex-direction: row;
   -moz-column-gap: 7.15%;
        column-gap: 7.15%;
-  margin-bottom: 2rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 .main__links {
   display: flex;
@@ -428,14 +340,27 @@ a:link {
   .main {
     max-width: 43.9375rem;
     margin: 0 2rem 3.6rem 2rem;
+    /* Mobile - Lista de tecnologias na apresentação - article1 */
+    /* article2 */
+    /* Lista de tecnologias utilizadas em cada projeto - article2 */
   }
   .main__hard-skills {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 3.6rem;
+  }
+  .main__picture {
+    margin-bottom: 0.9rem;
+  }
+  .main__hSkills {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .main__links {
+    margin-bottom: 3rem;
   }
   /* Mobile - Footer */
   .footer {
@@ -467,14 +392,27 @@ a:link {
   .main {
     max-width: 70rem;
     margin: 0 2.5rem 5rem 2.5rem;
+    /* Mobile - Lista de tecnologias na apresentação - article1 */
+    /* article2 */
+    /* Lista de tecnologias utilizadas em cada projeto - article2 */
   }
   .main__hard-skills {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 5rem;
+  }
+  .main__picture {
+    margin-bottom: 1.25rem;
+  }
+  .main__hSkills {
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+  }
+  .main__links {
+    margin-bottom: 3.75rem;
   }
   /* Tablet - Footer */
   .footer {

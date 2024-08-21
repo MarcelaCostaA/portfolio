@@ -1,6 +1,6 @@
 
 
-$breakpoints: ( 
+$breakpoints: (
   $null: 320px,
   $mobile: 360px,
   $tablet: 768px,
@@ -29,17 +29,17 @@ $h3-font-sizes: (
 );
 
 $h4-font-sizes: (
-  $null: 1.25rem,
-  $mobile: 1.5rem,
-  $tablet: 1.5rem,
+  $null: 1.2rem,
+  $mobile: 1.3rem,
+  $tablet: 1.4rem,
   $desktop: 1.75rem,
 );
 
 $h5-font-sizes: (
-  $null: 1.125rem,
-  $mobile: 1.25rem,
-  $tablet: 1.25rem,
-  $desktop: 1.5rem,
+  $null: 1rem,
+  $mobile: 1.15rem,
+  $tablet: 1.2rem,
+  $desktop: 1.3rem,
 );
 
 $p-font-sizes: (
@@ -80,24 +80,6 @@ $p-font-sizes: (
   }
 } 
 
-/*
-@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
-  @each $fs-breakpoint, $fs-font-size in $fs-map {
-    @if $fs-breakpoint >= $desktop {
-      font-size: $fs-font-size;
-    }
-    @else {
-      // If $fs-font-size is a key that exists in
-      // $screen-sizes, use the value
-      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
-        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
-      }
-      @media only screen and (min-width: $fs-breakpoint) {
-        font-size: $fs-font-size;
-      }
-    }
-  }
-}*/
 
 
 
