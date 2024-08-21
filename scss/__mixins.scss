@@ -8,18 +8,52 @@
   flex-direction: $direction;
 }
 
+/* Mixin para Grid */
 @mixin projeto {
-  .main {
-    &__projeto {
-      @include flexCenter(column, flex-start);
 
-      min-width: 25rem;
-      max-width: 34rem;
-      min-height: 9,19rem;
-      max-height: 12.5rem;
-    }
+  @media (min-width: 476px) {
+    max-width: $max-width-desktop;
+    display: grid;
+    grid-template-columns: 48.57% 48.57%;
+    grid-auto-rows: minmax(10rem, auto);
+    column-gap: $gg-columns;
+    row-gap: $gg-rows;
+  }
+  @media (max-width: 475px) {
+    grid-template-columns: 100%;
+  }
+}
+
+
+/*
+@mixin 
+
+@mixin projeto {
+
+  @if @media (min-width: 476px) {
+    max-width: $max-width-desktop;
+    display: grid;
+    grid-template-columns: 48.57% 48.57%;
+    grid-auto-rows: minmax(9.19rem, auto);
+    column-gap: $gg-columns;
+    row-gap: $gg-rows;
+  }
+  @else {
+    max-width: $max-width-desktop;
+    display: grid;
+    grid-template-columns: 48.57% 48.57%;
+    grid-auto-rows: minmax(9.19rem, auto);
+    column-gap: $gg-columns;
+    row-gap: $gg-rows;
+  }
+}
+
+
   
-    &__hSkills {
+    
+}
+
+&__hSkills {
       @include flexCenter(row, flex-start);
     }
   
@@ -27,7 +61,6 @@
       @include flexCenter(row, flex-start);
     }
   }
-}
 
 
 /* Mixin Articles 

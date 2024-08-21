@@ -42,6 +42,7 @@ a {
 /* Height */
 /* Margem - Padding - Gap */
 /* Gap */
+/* Padding  */
 /* Margin */
 /* Famílias de Fontes */
 /* Font Weight */
@@ -84,6 +85,45 @@ a {
   }
 }*/
 /* Mixin Display Flex */
+/* Mixin para Grid */
+/*
+@mixin 
+
+@mixin projeto {
+
+  @if @media (min-width: 476px) {
+    max-width: $max-width-desktop;
+    display: grid;
+    grid-template-columns: 48.57% 48.57%;
+    grid-auto-rows: minmax(9.19rem, auto);
+    column-gap: $gg-columns;
+    row-gap: $gg-rows;
+  }
+  @else {
+    max-width: $max-width-desktop;
+    display: grid;
+    grid-template-columns: 48.57% 48.57%;
+    grid-auto-rows: minmax(9.19rem, auto);
+    column-gap: $gg-columns;
+    row-gap: $gg-rows;
+  }
+}
+
+
+
+
+}
+
+&__hSkills {
+      @include flexCenter(row, flex-start);
+    }
+
+    &__links {
+      @include flexCenter(row, flex-start);
+    }
+  }
+
+
 /* Mixin Articles 
 @mixin projeto {
   .main {
@@ -254,6 +294,12 @@ p {
   }
 }
 
+a:link {
+  color: #d4af37;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
 /* Desktop - Header */
 .header {
   max-width: 70rem;
@@ -301,35 +347,55 @@ p {
 .main {
   max-width: 70rem;
   margin: 0 auto 7rem auto;
+  /* Lista de tecnologias na apresentação - article1 */
+  /* Lista de tecnologias utilizadas em cada projeto - article2 */
+}
+@media (min-width: 476px) {
+  .main__container-grid {
+    max-width: 70rem;
+    display: grid;
+    grid-template-columns: 48.57% 48.57%;
+    grid-auto-rows: minmax(10rem, auto);
+    -moz-column-gap: 2.86%;
+         column-gap: 2.86%;
+    row-gap: 4rem;
+  }
+}
+@media (max-width: 475px) {
+  .main__container-grid {
+    grid-template-columns: 100%;
+  }
+}
+.main__picture {
+  margin-bottom: 1.75rem;
 }
 .main__hard-skills {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  -moz-column-gap: 7.15%;
+       column-gap: 7.15%;
   margin-bottom: 7rem;
 }
-.main__projeto .main__projeto {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  min-width: 25rem;
-  max-width: 34rem;
-  min-height: 9, 19rem;
-  max-height: 12.5rem;
-}
-.main__projeto .main__hSkills {
+.main__hSkills {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  -moz-column-gap: 7.15%;
+       column-gap: 7.15%;
+  margin-bottom: 2rem;
 }
-.main__projeto .main__links {
+.main__links {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  -moz-column-gap: 7.15%;
+       column-gap: 7.15%;
+  text-transform: uppercase;
+  transition: all 0.3ms ease-in-out;
 }
 
 /* Desktop - Footer */

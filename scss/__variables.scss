@@ -22,8 +22,13 @@ $foto-height-desktop: 50rem;
 
 /* Margem - Padding - Gap */
 /* Gap */
-$gg-columns: 2rem;
+$gg-columns: 2.86%;
 $gg-rows: 4rem;
+
+/* Padding  */
+$pr-desktop: 2rem;
+$pr-tablet: 1.5rem;
+$pr-mobile: 1rem;
 
 /* Margin */
 $m-desktop-b: 7rem;
@@ -32,6 +37,10 @@ $m-tablet-b: 5rem;
 $m-tablet-s: 2.5rem;
 $m-mobile-b: 3.6rem;
 $m-mobile-s: 2rem;
+$mb-desktop: 2rem;
+$mb-tablet: 1.5rem;
+$mb-mobile: 1rem;
+
 
 /* Famílias de Fontes */
 $ff-titulos: "Noto Serif", serif;
