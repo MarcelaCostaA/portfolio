@@ -164,8 +164,21 @@ p {
 
 /* Desktop - Footer */
 .footer {
-    max-width: $max-width-desktop;
-    margin: 0 auto $m-desktop-b auto;
+    background-color: $cor-grafite;
+    width: 100vw;
+    margin: 0;  
+    
+
+    &__container-flex {
+        max-width: $max-width-desktop;
+        margin: 0 auto;
+        padding: $m-desktop-b 0; 
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
 }
 
 

@@ -312,8 +312,17 @@ p {
 
 /* Desktop - Footer */
 .footer {
+  background-color: #2f2f2f;
+  width: 100vw;
+  margin: 0;
+}
+.footer__container-flex {
   max-width: 70rem;
-  margin: 0 auto 7rem auto;
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+.footer p {
+  font-size: 1rem;
 }
 
 /* Media query - mobiles */
