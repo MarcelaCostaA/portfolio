@@ -8,6 +8,13 @@
   flex-direction: $direction;
 }
 
+@mixin flexAlign($direction, $justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
 /* Mixin para Grid */
 @mixin projeto {
 

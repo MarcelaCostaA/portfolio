@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="72x72" href="imagens/favicon-bg-gold.png">
+  <link rel="icon" type="image/png" sizes="72x72" href="imagens/favicon-pb.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,8 @@
 
   <!-- Header -->
   <header class="header">
+
+ 
     <!-- Header - Mídia Social -->
     <div class="header__social">
       <a href="#" aria-label="Entre no perfil no Linkedin" target="_blank"><i class="fa-brands fa-linkedin header__icon icon"></i></a>
@@ -70,6 +72,11 @@
 
     <!-- Main - Artigo 2 - Portfólio -->
     <article class="main__article2">
+
+
+      <!-- Header - Elemento Decorativo Dourado
+      <img src="imagens/elementos-dourados/12.svg" alt="Elementos decorativos" class="main__bg-img">-->
+    
       <h2>portfólio</h2>
 
       <!-- Main - Artigo 2 - Projetos em Container Grid -->
@@ -181,28 +188,45 @@
 
     <!-- Footer - Container Flex -->
     <div class="footer__container-flex">
-      
-      <!-- Footer - Apresentação-->
-      <div class="footer__apresentacao">
-        <h2>entre em contato</h2>
-        <p>Eu adoraria saber um pouco sobre os projetos incríveis que você pretende desenvolver e nos quais eu poderia participar. Preencha o formúlario e eu retornarei assim que possível.</p>
+
+      <div class="footer__container-contato">
+
+        <!-- Footer - Apresentação-->
+        <div class="footer__apresentacao">
+          <h2>entre em contato</h2>
+          <p>Eu adoraria saber um pouco sobre os projetos incríveis que você pretende desenvolver e nos quais eu poderia participar. Preencha o formúlario e eu retornarei assim que possível.</p>
+        </div>
+        
+        <!-- Footer - Formulário -->
+        <form action="https://formspree.io/f/mpwaynoj" method="POST" class="footer__formulario">
+          <label for="email" class="footer__label">
+            <input id="email" type="email" name="email" class="footer__email" required>
+            email
+          </label>
+          <label for="mensagem" class="footer__label">
+            <textarea id="mensagem" name="message" class="footer__textarea" rows="4" cols="26" required></textarea>
+            mensagem
+          </label>
+          <button type="submit" value="Submit" class="footer__button" >enviar</button>
+        </form>
       </div>
       
-      <!-- Footer - Formulário -->
-      <form action="" class="footer__form"></form>
 
       <!-- Footer - Linhas Decorativa Dourada -->
-      <div class="header__line-gold line-gold"></div>
+      <div class="footer__line-gold"></div>
 
-      <h4>marcelacosta</h4>
-
-      <!-- Footer - Mídia Social -->
-      <div class="footer__social">
-        <i class="fa-brands fa-linkedin footer__icon icon"></i>
-        <i class="fa-brands fa-square-github footer__icon icon"></i>
-        <i class="fa-brands fa-codepen footer__icon icon"></i>
-        <i class="fa-brands fa-square-behance footer__icon icon"></i>
+      <div class="footer__container-midia">
+        <h4><a href=mailto:"frontend.marcela@gmail.com" aria-label="enviar email para Marcela" >marcela.costa</a></h4>
+  
+        <!-- Footer - Mídia Social -->
+        <div class="footer__social">
+          <a href="#" aria-label="Entre no perfil no Linkedin" target="_blank"><i class="fa-brands fa-linkedin footer__icon icon"></i></a>
+          <a href="https://github.com/MarcelaCostaA" aria-label="Entre no perfil no GitHub" target="_blank"><i class="fa-brands fa-square-github footer__icon icon" ></i></a>
+          <a href="https://codepen.io/Marcela-Costa" aria-label="Entre no perfil no CodePen" target="_blank"><i class="fa-brands fa-codepen footer__icon icon"></i></a>
+          <a href="https://www.behance.net/marcelaamorim" aria-label="Entre no perfil no Behance" target="_blank"><i class="fa-brands fa-square-behance footer__icon icon"></i></a>
+        </div>
       </div>
+
     </div>
 
 
