@@ -21,7 +21,7 @@ Portfólio de Desenvolvedora Frontend com alguns projetos e estudos utilizando H
 
 ### GitPage
 
-- Gitpage: [Portfólio de Marcela Costa](https://your-solution-url.com)
+- Gitpage: [Portfólio de Marcela Costa](https://marcelacostaa.github.io/portfolio/)
 
 
 ### Desenvolvido Com
