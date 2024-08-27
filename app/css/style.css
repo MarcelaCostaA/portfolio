@@ -257,15 +257,6 @@ p {
 .main {
   max-width: 70rem;
   margin: 0 auto 7rem auto;
-  /*
-  &__bg-img {
-      position: absolute;
-      height: 100%;
-      top: -20vw;
-      right: -50vw;
-      z-index: -1;
-      opacity: 0.75;
-  } */
   /* Lista de tecnologias na apresentação - article1 */
   /* article2 */
   /* Lista de tecnologias utilizadas em cada projeto - article2 */
