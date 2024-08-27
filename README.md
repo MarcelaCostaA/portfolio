@@ -1,6 +1,6 @@
 # PORTFÓLIO
 
-Portfólio de Desenvolvedora Frontend com alguns projetos e estudos nas áreas de HTML5, CSS, SASS, JavaScript e React.
+Portfólio de Desenvolvedora Frontend com alguns projetos e estudos utilizando HTML5, CSS, SASS, JavaScript e React.
 
 ## Conteúdo
 
@@ -16,7 +16,7 @@ Portfólio de Desenvolvedora Frontend com alguns projetos e estudos nas áreas d
 
 ### Imagem
 
-![Portfólio de Marcela Costa](./screenshot.jpg)
+![Portfólio de Marcela Costa](imagens/screeenshot.png)
 
 
 ### GitPage
@@ -31,8 +31,6 @@ Portfólio de Desenvolvedora Frontend com alguns projetos e estudos nas áreas d
 - CSS Grid
 - SASS
 - Media Queries
-- JavaScript
-
 
 
 ### Recursos Utilizados
