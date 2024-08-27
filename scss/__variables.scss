@@ -1,11 +1,11 @@
 /* Cores */
 $cor-branco: white;
 $cor-preto: #151515;
-$cor-grafite: #464646; //#242424; #2f2f2f;
+$cor-grafite: #464646; //Cores testadas #242424; #2f2f2f;
 $cor-ouro: #d4af37;
 $bg-gold: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
 radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-/* $bg-gold é uma graduação de cor para background das linhas douradas */
+/* $bg-gold é uma graduação de cor para background das linhas douradas e do botão 'enviar' localizado no footer*/
 
 /* Width */
 $max-width-mobile: 43.9375rem;

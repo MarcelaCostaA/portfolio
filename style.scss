@@ -76,16 +76,6 @@ p {
     position: relative;
     margin: 0 auto $m-desktop-b auto;
 
-    /*
-    &__bg-img {
-        position: absolute;
-        height: 90%;
-        top: -15vw;
-        left: -35vw;
-        z-index: 1;
-        opacity: 0.75;
-    } */
-
     &__social {
         position: absolute;
         top: calc($m-desktop-s / 2);
@@ -250,11 +240,18 @@ p {
         margin-top: 1rem;
         padding: 0.75rem 1.5rem;
         font-size: 1rem;
+        border: none;
         border-radius: 0.5rem;
         color: $cor-branco;
         font-weight: 500;
         text-transform: uppercase;
         background-image: $bg-gold;
+        transition: all 0.3ms ease-in-out;
+
+        /* Sombreado do botão */
+        -webkit-box-shadow: 6px 6px 16px 8px rgba(0,0,0,0.5);
+        -moz-box-shadow: 6px 6px 16px 8px rgba(0,0,0,0.5);
+        box-shadow: 6px 6px 16px 8px rgba(0,0,0,0.5);
     }
 
     &__line-gold {
