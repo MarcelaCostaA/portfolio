@@ -130,7 +130,7 @@ p {
         @include flexCenter(row, center);
         column-gap: calc($gg-columns * 2.5);
 
-        margin-bottom: $m-desktop-b;
+        margin-bottom: calc($m-desktop-b * 2);
     }
 
     /* article2 */
